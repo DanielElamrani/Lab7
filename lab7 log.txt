@@ -1,0 +1,98 @@
+login as: delamran
+Pre-authentication banner message from server:
+| Access to Brooklyn College computers is restricted to authorized users
+|         and approved educational and research purposes, only.
+End of banner message from server
+delamran@146.245.252.28's password:
+Last login: Mon Oct 12 15:41:47 2020 from ool-45700017.dyn.optonline.net
+[delamran@sol28 ~]$ ls
+example          MyCalendars   Repo2                  songs.csv
+HelloWorld.java  myscript.exe  repoB                  songsReport.csv
+imageFolder      public_html   RepoMeta               top20songs1.csv
+log              Repo1         scriptForTop20song.sh  top20songs.csv
+[delamran@sol28 ~]$ mkdir Lab7
+[delamran@sol28 ~]$ ls
+example          log           Repo1     scriptForTop20song.sh  top20songs.csv
+HelloWorld.java  MyCalendars   Repo2     songs.csv
+imageFolder      myscript.exe  repoB     songsReport.csv
+Lab7             public_html   RepoMeta  top20songs1.csv
+[delamran@sol28 ~]$ cd Lab7
+[delamran@sol28 Lab7]$ vim main.cpp
+[delamran@sol28 Lab7]$ ls
+main.cpp
+[delamran@sol28 Lab7]$ vim printThis.h
+[delamran@sol28 Lab7]$ ls
+main.cpp  printThis.h
+[delamran@sol28 Lab7]$ vim printThis.cpp
+[delamran@sol28 Lab7]$ ls
+main.cpp  printThis.cpp  printThis.h
+[delamran@sol28 Lab7]$ g++ main.cpp printThis.cpp
+a.out  main.cpp  printThis.cpp  printThis.h
+[delamran@sol28 Lab7]$ g++ main.cpp printThis.cpp
+[delamran@sol28 Lab7]$ ls
+a.out  main.cpp  printThis.cpp  printThis.h
+[delamran@sol28 Lab7]$ ./a.out
+This is my makefile
+[delamran@sol28 Lab7]$ vim Makefile
+[delamran@sol28 Lab7]$ ls
+a.out  main.cpp  Makefile  printThis.cpp  printThis.h
+[delamran@sol28 Lab7]$ make
+g++ -c main.cpp
+g++ -c printThis.cpp
+g++ main.o printThis.o -o output
+[delamran@sol28 Lab7]$ ls
+a.out     main.o    output         printThis.h
+main.cpp  Makefile  printThis.cpp  printThis.o
+[delamran@sol28 Lab7]$ ./output
+This is my makefile
+[delamran@sol28 Lab7]$ make
+make: `output' is up to date.
+[delamran@sol28 Lab7]$ make clean
+rm *.o output
+[delamran@sol28 Lab7]$ make
+g++ -c main.cpp
+g++ -c printThis.cpp
+g++ main.o printThis.o -o output
+[delamran@sol28 Lab7]$ ls
+a.out     main.o    output         printThis.h
+main.cpp  Makefile  printThis.cpp  printThis.o
+[delamran@sol28 Lab7]$ ./output
+This is my makefile
+[delamran@sol28 Lab7]$ make
+make: `output' is up to date.
+[delamran@sol28 Lab7]$ touch printThis.h
+[delamran@sol28 Lab7]$ make
+g++ -c printThis.cpp
+g++ main.o printThis.o -o output
+[delamran@sol28 Lab7]$ ./output
+This is my makefile
+[delamran@sol28 Lab7]$ git init
+Initialized empty Git repository in /users1/st/delamran/Lab7/.git/
+[delamran@sol28 Lab7]$ git add .
+[delamran@sol28 Lab7]$ git commit -m "uploading to github"
+[master (root-commit) 7f04142] uploading to github
+ 8 files changed, 43 insertions(+)
+ create mode 100644 Makefile
+ create mode 100755 a.out
+ create mode 100644 main.cpp
+ create mode 100644 main.o
+ create mode 100755 output
+ create mode 100644 printThis.cpp
+ create mode 100644 printThis.h
+ create mode 100644 printThis.o
+[delamran@sol28 Lab7]$ git remote add origin https://github.com/DanielElamrani/Lab7.git
+[delamran@sol28 Lab7]$ git push origin master
+Username for 'https://github.com': danielelamrani@gmail.com
+Password for 'https://danielelamrani@gmail.com@github.com':
+Counting objects: 9, done.
+Delta compression using up to 8 threads.
+Compressing objects: 100% (9/9), done.
+Writing objects: 100% (9/9), 4.72 KiB | 0 bytes/s, done.
+Total 9 (delta 1), reused 0 (delta 0)
+remote: Resolving deltas: 100% (1/1), done.
+To https://github.com/DanielElamrani/Lab7.git
+ * [new branch]      master -> master
+[delamran@sol28 Lab7]$ ls
+a.out     main.o    output         printThis.h
+main.cpp  Makefile  printThis.cpp  printThis.o
+[delamran@sol28 Lab7]$
